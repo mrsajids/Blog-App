@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require('mongoose');
 const cors = require("cors");
-const path = require("path");
+// const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -14,10 +14,10 @@ app.use(cors())
 //const db = 'mongodb+srv://sajeed:sajeed123@cluster0.ivnebch.mongodb.net/?retryWrites=true&w=majority'
 
 //static files
-app.use(express.static(path.join(__dirname,'./frontend/build')))
-app.get('*/',function(req,res){
-    res.sendFile(path.join(__dirname,'./frontend/build/index.html'))
-})
+// app.use(express.static(path.join(__dirname,'./frontend/build')))
+// app.get('*/',function(req,res){
+//     res.sendFile(path.join(__dirname,'./frontend/build/index.html'))
+// })
 
 mongoose.connect(process.env.URI).then(() => {
     console.log('connection successful');
@@ -36,4 +36,4 @@ const User1 = require('./routes/userDataRoute');
 app.use(User1)
 
 
-//app.listen(4000);
+// app.listen(4000);

@@ -14,7 +14,7 @@ app.use(cors())
 //const db = 'mongodb+srv://sajeed:sajeed123@cluster0.ivnebch.mongodb.net/?retryWrites=true&w=majority'
 
 //static files
-/app.use(express.static(path.join(__dirname,'./frontend/build')))
+app.use(express.static(path.join(__dirname,'./frontend/build')))
 app.get('*/',function(req,res){
   res.sendFile(path.join(__dirname,'./frontend/build/index.html'))
 })

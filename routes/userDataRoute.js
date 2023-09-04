@@ -43,7 +43,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//DELETE
+// DELETE
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {

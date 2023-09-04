@@ -19,7 +19,7 @@ app.use(cors())
 //   res.sendFile(path.join(__dirname,'./frontend/build/index.html'))
 // })
 
-//connection making
+//connection code
 mongoose.connect(process.env.URI).then(() => {
     console.log('connection successful');
     app.listen(process.env.PORT || 5000, (err) => {

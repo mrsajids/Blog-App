@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const newUser = require("../models/userDataModel");
 
-//Add user
+// Add user
 router.post("/", async (req, res) => {
   console.log(req.body)
   const { name, email, age } = req.body;
